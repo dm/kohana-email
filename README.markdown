@@ -1,4 +1,4 @@
-Email Module For Kohana 3.2
+Email Module For Kohana 3.3
 =================================
 
 This is a direct port of the email helper from Kohana 2.3.3 source code.
@@ -17,7 +17,7 @@ Note: PopBeforeSmtp is not supported in this release as I didn't know what was r
 It IS supported in Swiftmailer through the Swift_Plugins_PopBeforeSmtpPlugin plugin class. This can be used manually if required.
 If anyone can modify and test the connect() methd with this functionality I'll add it but I can't find documentation about how it used to work (i.e. is expected to work) so I have left it out for now.
 
-### Email::send($to, $from, $subject, $message, $html = false)
+### Email::send($to, $from, $subject, $message, $html = false, $replyto = null)
 
 $to can be any of the following:
 
@@ -26,6 +26,8 @@ $to can be any of the following:
 *  an array of recipients in either above format, keyed by type e.g. array('to' => 'test@example.com', 'cc' => array('test2@example.com', 'Jane Doe'), 'bcc' => 'another@example.com')
 
 $from can be either a string email or array of email and name as above
+
+$replyto could be an array of one element containing a string or array of email an name as above
 
 More complex email (multipart, attachments, batch mailing etc.) must be done using the native Swift_Mailer classes. The Swift Mailer autoloader is included by connect() so you can use and class in the Swift library without worrying about including files.
 
