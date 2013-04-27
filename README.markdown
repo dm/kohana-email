@@ -39,3 +39,10 @@ The Swift_Mailer object setup by connect is returned by it so if you need to acc
 
         $mailer->send($message);
 
+
+## Acknowledgments
+
+* [Daniel Macedo](https://github.com/dm) [@dmacedo](https://twitter.com/dmacedo)
+* [John Richard Chipps-Harding](https://github.com/digitaljohn)
+* [Lieuwe Jan Eilander](https://github.com/Luwe)
+* [Thomas Chemineau](https://github.com/tchemineau)
